@@ -58,13 +58,15 @@ let result = `${a} + ${b} is  ${
 }`;
 console.log(result);
 
-// //Exercise 5
-const getGreeting = function(name) {
-    return 'Hello ' + name + '!'
-}
-console.log(getGreeting('John'));
+/*Exercise 5 - Rewrite the following function using: a) function expression syntax, and b) arrow function 
+syntax. Test each version to make sure they work the same*/
+// const getGreeting = function(name) {
+//     return 'Hello ' + name + '!'
+// }
+// console.log(getGreeting('John'));
 const getGreeting = (name) => 'Hello ' + name + '!'
 console.log(getGreeting('Alice'))
+
 
 // //Exercise 6
 const westley = {
