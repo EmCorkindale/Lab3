@@ -36,15 +36,16 @@ console.log(undefined === null)
 console.log(" \t \n" - 2)
 
 // //Exercise 2
-// /* let lessThan1 = three < four will result in false because the value of three and four are strings so they are compared letter-by-letter
-// which means three is actually greater than four because it comes first. It could be fixed by saying let lessThan1 = Number(three) < Number(four)*/
+/* let lessThan2 = thirty < four will result in true incorrectly because the value of "30" and "4" are strings so they are compared lexicographically, 
+and as "3" comes after "4" it will return as true. Fix this by using the Number property to convert the strings to numbers to then compare them. */
 let three = "3"
 let four = "4"
 let thirty = "30"
 let lessThan1 = Number(three) < Number(four)
-console.log(lessThan1)
+let lessThan2 = thirty < four
+console.log(lessThan2)
 
-//Exercise 3
+// //Exercise 3
 if (0) console.log('#1 zero is true') //This will not print because 0 is falsy
 if ("0") console.log('#2 zero is true') //This will print because the statement is truthy
 if (null) console.log('null is true') //Null is falsy so this will not print
@@ -57,15 +58,15 @@ let result = `${a} + ${b} is  ${
 }`;
 console.log(result);
 
-//Exercise 5
-// const getGreeting = function(name) {
-//     return 'Hello ' + name + '!'
-// }
-// console.log(getGreeting('John'));
-// const getGreeting = (name) => 'Hello ' + name + '!'
-// console.log(getGreeting('Alice'))
+// //Exercise 5
+const getGreeting = function(name) {
+    return 'Hello ' + name + '!'
+}
+console.log(getGreeting('John'));
+const getGreeting = (name) => 'Hello ' + name + '!'
+console.log(getGreeting('Alice'))
 
-//Exercise 6
+// //Exercise 6
 const westley = {
   name: "Westley",
   numFingers: 5,
@@ -90,7 +91,7 @@ const inigo = {
 inigo.greeting(westley);
 inigo.greeting(rugen);
 
-//Exercise 7
+// //Exercise 7
 const basketballGame = {
   score: 0,
   fouls: 0,
@@ -116,7 +117,7 @@ const basketballGame = {
       ". " + "There have been " + this.fouls,
       "fouls"
     );
-    return this; // Return the object for chaining
+//     return this; // Return the object for chaining
   },
   fulltimeScore() {
     console.log(
@@ -128,7 +129,7 @@ const basketballGame = {
   },
 };
 
-//modify each of the above object methods to enable function chaining as below:
+// //modify each of the above object methods to enable function chaining as below:
 basketballGame
   .basket()
   .freeThrow()
@@ -142,7 +143,7 @@ basketballGame
   .foulsCount()
   .fulltimeScore();
 
-//Exercise 8
+// //Exercise 8
 function objectProperties(city) {
   for (let property in city) console.log(`${property}: ${city[property]}`);
 }
@@ -162,7 +163,7 @@ const christchurch = {
 };
 console.log(christchurch);
 
-//Exercise 9
+// //Exercise 9
 let teamSports = ["Hockey", "Cricket", "Volleyball"];
 let moreSports = teamSports.slice();
 moreSports.push("Rugby", "Soccer");
@@ -173,11 +174,11 @@ dog2 = "Ted";
 let cat1 = { name: "Fluffy", breed: "Siberian" };
 let cat2 = Object.assign({}, cat1);
 cat2.name = "Shane";
-// the name of cat1 has changed because I modified the properties, and the properties in teamSports have changed using .shift and .push, but dog1 has not changed Changing the value of dog2 doesn't affect dog1.
+// // the name of cat1 has changed because I modified the properties, and the properties in teamSports have changed using .shift and .push, but dog1 has not changed Changing the value of dog2 doesn't affect dog1.
 
 console.log(teamSports, cat1, dog1);
 
-//Exercise 10
+// //Exercise 10
 
 function Person(name, age) {
   this.name = name;
